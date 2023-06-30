@@ -9,6 +9,6 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class CardType extends BaseEntity {
-    public String typeName;
+public class UserRole extends BaseEntity {
+    public String name;
 }

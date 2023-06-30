@@ -1,20 +1,20 @@
 package com.example.reservation.entity;
 
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.ManyToOne;
+import lombok.*;
 
-@NoArgsConstructor
+@Entity(name = "room")
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@Entity
+@Builder
 public class RoomEntity extends BaseEntity{
-    public String number;
-    public int size;
-    public Double price;
-    public RoomType type;
-    public Boolean hasMonitor;
+public String number;
+public int size;
+public double price;
+public Boolean hasMonitor;
+@ManyToOne
+public RoomType type;
 }
